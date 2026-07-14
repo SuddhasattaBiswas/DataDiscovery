@@ -17,7 +17,7 @@ spark.conf.set("c.var1", var1)
 
 SourceTable = 'NDH.Cash_Capex_NDA'
 #TargetTable = 'dbo.Cash_Capex_NDA'
-TargetTable = 'stg.Cash_Capex_NDA'
+TargetTable = 'stg.Cash_Capex_NDA_NEW'
 Actual_Exchange_Rate_NDT_df = spark.sql("""SELECT * from NDH.Cash_Capex_NDA where Ingestion_Revision_Date like '${c.var1}' """).withColumn("NDSS_REFRESH_DATE",current_timestamp().cast("timestamp"))
 Actual_Exchange_Rate_NDT_df.display()
 setconnections();
