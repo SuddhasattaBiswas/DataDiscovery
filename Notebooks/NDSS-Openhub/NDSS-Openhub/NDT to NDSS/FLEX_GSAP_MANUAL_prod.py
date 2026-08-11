@@ -65,7 +65,7 @@ if (view_cnt == 0):
 
 # COMMAND ----------
 
-TargetTable = 'STG.CAPEX_FLEX'
+TargetTable = 'STG.CAPEX_FLEX-new'
 
 FLEX_FILE = spark.sql("SELECT * FROM df_finalView").withColumn("NDSS_REFRESH_DATE",current_timestamp().cast("timestamp"))
 
