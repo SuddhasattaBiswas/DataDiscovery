@@ -106,7 +106,7 @@ if (view_cnt == 0):
 
 # COMMAND ----------
 
-TargetTable = 'STG.CAPEX_LE'
+TargetTable = 'STG.CAPEX_LE-123'
 
 CAPEX_LE = spark.sql("SELECT * FROM df_finalSQL").withColumn("NDSS_REFRESH_DATE",current_timestamp().cast("timestamp"))
 
